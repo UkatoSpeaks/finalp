@@ -41,7 +41,7 @@ export default function Navbar() {
           <NavLink href="#contact">/CONTACT</NavLink>
           
           <Link 
-            href="#hire-me" 
+            href="#contact" 
             className="ml-2 bg-accent border-2 border-black px-4 py-1.5 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center gap-2 group"
           >
             HIRE_ME 

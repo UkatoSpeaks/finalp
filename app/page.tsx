@@ -229,7 +229,7 @@ export default function Home() {
               <div className="font-mono text-[10px] font-bold uppercase text-black/40">
                 0xCOMMITS_PER_CYCLE: STEADY
               </div>
-              <Link href="https://github.com" className="bg-black text-white px-4 py-1 text-xs font-bold uppercase hover:bg-accent hover:text-black transition-colors">
+              <Link href="https://github.com/UkatoSpeaks" className="bg-black text-white px-4 py-1 text-xs font-bold uppercase hover:bg-accent hover:text-black transition-colors">
                 OPEN_PROFILE_&gt;
               </Link>
             </div>
@@ -427,14 +427,14 @@ export default function Home() {
             />
             <ContactLink 
               label="LINKEDIN_CORE" 
-              value="/IN/ANURAGP" 
-              href="https://linkedin.com/in" 
+              value="/IN/ANURAG-C" 
+              href="https://www.linkedin.com/in/anurag-chaudhary-238625309" 
               color="bg-accent"
             />
             <ContactLink 
               label="GITHUB_REPO" 
-              value="/ANURAG-P" 
-              href="https://github.com" 
+              value="/UkatoSpeaks" 
+              href="https://github.com/UkatoSpeaks" 
               color="bg-white"
             />
             <ContactLink 

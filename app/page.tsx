@@ -421,8 +421,8 @@ export default function Home() {
           <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ContactLink 
               label="EMAIL_UPLINK" 
-              value="developer@anurag.exe" 
-              href="mailto:anuragp@example.com" 
+              value="ANURAG.C@GMAIL" 
+              href="mailto:chaudharyanurag801@gmail.com" 
               color="bg-white"
             />
             <ContactLink 
@@ -460,7 +460,7 @@ export default function Home() {
                 </p>
                 <p className="text-gray-400">Searching for secure uplink...</p>
                 <p className="text-black font-bold">UPLINK_ESTABLISHED: [100% SUCCESS]</p>
-                <Link href="mailto:anuragp@example.com" className="inline-block bg-accent px-4 py-2 mt-4 font-heading text-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all uppercase tracking-tighter">
+                <Link href="mailto:chaudharyanurag801@gmail.com" className="inline-block bg-accent px-4 py-2 mt-4 font-heading text-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all uppercase tracking-tighter">
                   EXECUTE_MESSAGE_SEQUENCE
                 </Link>
               </div>

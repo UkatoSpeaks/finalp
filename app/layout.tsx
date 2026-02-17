@@ -14,7 +14,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ANURAGP // EXECUTABLE_SYSTEM",
+  title: "Anurag Portfolio",
   description: "High-performance Neo-Brutalist Engineering Portfolio",
 };
 

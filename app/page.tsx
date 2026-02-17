@@ -290,37 +290,37 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <DevLogCard 
             id="LOG_001"
-            date="FEB 12, 2024"
+            date="FEB 12, 2026"
             insight="Optimized API response times by 40% using Redis for query caching. Latency is the silent killer of user experience."
             color="bg-white"
           />
           <DevLogCard 
             id="LOG_002"
-            date="FEB 08, 2024"
+            date="FEB 08, 2026"
             insight="Learned that UI performance during scroll events matters more than animation complexity. 60FPS is non-negotiable."
             color="bg-accent"
           />
           <DevLogCard 
             id="LOG_003"
-            date="FEB 03, 2024"
+            date="FEB 03, 2026"
             insight="Building AI agents taught me that system reliability and prompt engineering are often more critical than model size."
             color="bg-white"
           />
           <DevLogCard 
             id="LOG_004"
-            date="JAN 28, 2024"
+            date="JAN 28, 2025"
             insight="Reduced bundle size by 30% by migrating to targeted imports. Architecture is as much about removal as it is about addition."
             color="bg-accent-blue text-white"
           />
           <DevLogCard 
             id="LOG_005"
-            date="JAN 20, 2024"
+            date="JAN 20, 2025"
             insight="Functional components are not just code; they represent units of maintainability. Refactoring is a feature, not a chore."
             color="bg-white"
           />
           <DevLogCard 
             id="LOG_006"
-            date="JAN 15, 2024"
+            date="JAN 15, 2025"
             insight="Distributed systems require strict observability. If you can't measure it, you shouldn't build it."
             color="bg-accent"
           />

@@ -150,24 +150,32 @@ export default function Home() {
             description="AI Developer Assistant leveraging LLM APIs to streamline debugging and coding workflows."
             stack={["Next.js", "TypeScript", "Groq API", "AI Agents"]}
             color="bg-accent"
+            liveUrl="https://debugly-h3x4.vercel.app/"
+            githubUrl="https://github.com/UkatoSpeaks"
           />
           <ProjectCard 
             title="ZENFLOW.SaaS" 
             description="Productivity-focused platform with real-time dashboards and persistent user workflow systems."
             stack={["Next.js", "Node.js", "MongoDB", "Firebase"]}
             color="bg-white"
+            liveUrl="https://zen-flow-dusky.vercel.app/"
+            githubUrl="https://github.com/UkatoSpeaks"
           />
           <ProjectCard 
             title="INDIALAND.LOC" 
             description="Scalable location discovery platform focused on structured regional data and user exploration."
             stack={["Next.js", "Node.js", "MongoDB", "REST APIs"]}
             color="bg-white"
+            liveUrl="https://india-land-eight.vercel.app/"
+            githubUrl="https://github.com/UkatoSpeaks"
           />
           <ProjectCard 
             title="SPOTT.DISCOVERY" 
             description="Discovery-driven platform focused on user engagement and scalable content delivery."
             stack={["React", "Node.js", "MongoDB", "REST APIs"]}
             color="bg-accent-blue text-white"
+            liveUrl="https://spott-five.vercel.app/"
+            githubUrl="https://github.com/UkatoSpeaks"
           />
         </div>
 
@@ -541,7 +549,7 @@ function SkillModule({ title, skills, color }: { title: string; skills: string[]
   );
 }
 
-function ProjectCard({ title, description, stack, color }: { title: string; description: string; stack: string[]; color: string }) {
+function ProjectCard({ title, description, stack, color, liveUrl, githubUrl }: { title: string; description: string; stack: string[]; color: string; liveUrl?: string; githubUrl?: string }) {
   return (
     <div className="group flex flex-col border-[3px] border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all overflow-hidden">
       {/* Visual Preview Area */}
@@ -579,12 +587,20 @@ function ProjectCard({ title, description, stack, color }: { title: string; desc
 
         {/* Action Buttons */}
         <div className="mt-auto grid grid-cols-2 gap-4">
-          <button className="bg-accent border-[2px] border-black py-3 font-heading text-lg hover:bg-black hover:text-white transition-colors uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-0.5 active:translate-y-0.5">
+          <Link 
+            href={liveUrl || "#"} 
+            target={liveUrl ? "_blank" : undefined}
+            className="bg-accent border-[2px] border-black py-3 font-heading text-lg hover:bg-black hover:text-white transition-colors uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 flex justify-center items-center"
+          >
             LIVE_VIEW
-          </button>
-          <button className="bg-white border-[2px] border-black py-3 font-heading text-lg hover:bg-black hover:text-white transition-colors uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-0.5 active:translate-y-0.5">
+          </Link>
+          <Link 
+            href={githubUrl || "#"} 
+            target={githubUrl ? "_blank" : undefined}
+            className="bg-white border-[2px] border-black py-3 font-heading text-lg hover:bg-black hover:text-white transition-colors uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 flex justify-center items-center"
+          >
             SOURCE_CODE
-          </button>
+          </Link>
         </div>
       </div>
     </div>

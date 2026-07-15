@@ -90,7 +90,7 @@ export default function Home() {
 
           {/* Right: System / Stat Cards */}
           <div className="grid grid-cols-2 gap-4">
-            <StatCard label="PROJECTS_BUILT" value="12+" color="bg-white" />
+            <StatCard label="PROJECTS_BUILT" value="14+" color="bg-white" />
             <StatCard label="TECH_STACKS" value="10+" color="bg-accent" />
             <StatCard label="DSA_PRACTICE" value="500+" color="bg-white" />
             <StatCard label="CURRENT_STATUS" value="BUILDING" color="bg-accent-pink text-white" />
@@ -176,6 +176,50 @@ export default function Home() {
             color="bg-accent-blue text-white"
             liveUrl="https://spott-five.vercel.app/"
             githubUrl="https://github.com/UkatoSpeaks"
+          />
+        </div>
+
+        {/* Agentic AI Systems Subsection */}
+        <div className="mt-20 mb-12 border-t-[3px] border-dashed border-black pt-12">
+          <h3 className="text-3xl md:text-5xl font-heading leading-none mb-4">
+            AGENTIC_AI_<span className="text-accent-pink">AGENTS</span>
+          </h3>
+          <p className="font-mono text-sm font-bold text-black/50 uppercase tracking-widest">
+            // COGNITIVE_PIPELINES_AND_AUTONOMOUS_WORKFLOWS.LOG
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <AgentProjectCard 
+            title="CUSTOMER SUPPORT RAG AGENT" 
+            description="Built an intelligent customer support assistant that answers user queries using Retrieval-Augmented Generation (RAG). The system indexes a company FAQ PDF into a Chroma vector database using Mistral embeddings and retrieves relevant context before generating responses with an LLM. It also maintains conversational memory to provide context-aware answers across multiple interactions."
+            features={[
+              "PDF-based knowledge base indexing",
+              "Semantic search via Mistral embeddings",
+              "Conversational memory persistence",
+              "Source-grounded AI response generation"
+            ]}
+            stack={["Python", "FastAPI", "Streamlit", "LangChain", "ChromaDB", "Mistral", "Groq"]}
+            color="bg-accent"
+            liveUrl="https://customer-rag-agent.streamlit.app"
+            backendUrl="https://customer-rag-agent.onrender.com"
+            githubUrl="https://github.com/UkatoSpeaks/Customer-Rag-.git"
+          />
+          <AgentProjectCard 
+            title="MULTI-AGENT SCHEDULING ASSISTANT" 
+            description="Developed a production-style multi-agent scheduling assistant using LangGraph. The application routes user requests through specialized agents that understand booking intent, validate available time slots, maintain conversation state, and simulate appointment scheduling. The workflow demonstrates stateful agent orchestration with conditional routing and persistent memory."
+            features={[
+              "Multi-agent LangGraph orchestration",
+              "Intelligent routing & conditional edges",
+              "Booking workflow state machine",
+              "SQLite persistent checkpointer memory",
+              "Date normalization & slot validation"
+            ]}
+            stack={["Python", "FastAPI", "LangGraph", "LangChain", "SQLite", "Pydantic", "Streamlit"]}
+            color="bg-accent-pink"
+            liveUrl="https://multi-agent-scheduler.streamlit.app"
+            backendUrl="https://multi-agent-scheduler.onrender.com"
+            githubUrl="https://github.com/UkatoSpeaks/multi-agent-scheduler"
           />
         </div>
 
@@ -372,8 +416,8 @@ export default function Home() {
           {/* Rapid Verification Checklist */}
           <div className="flex flex-col gap-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <VerificationModule label="PROJECTS_DEPLOYED" value="12+" />
-              <VerificationModule label="AI_SYSTEMS_BUILT" value="05+" />
+              <VerificationModule label="PROJECTS_DEPLOYED" value="14+" />
+              <VerificationModule label="AI_SYSTEMS_BUILT" value="07+" />
               <VerificationModule label="FULL_STACK_READY" value="YES" color="bg-accent" />
               <VerificationModule label="SYSTEM_DOWNTIME" value="0.0%" color="bg-accent-pink text-white" />
             </div>
@@ -600,6 +644,132 @@ function ProjectCard({ title, description, stack, color, liveUrl, githubUrl }: {
             className="bg-white border-[2px] border-black py-3 font-heading text-lg hover:bg-black hover:text-white transition-colors uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 flex justify-center items-center"
           >
             SOURCE_CODE
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function AgentProjectCard({ 
+  title, 
+  description, 
+  features,
+  stack, 
+  color, 
+  liveUrl, 
+  backendUrl,
+  githubUrl 
+}: { 
+  title: string; 
+  description: string; 
+  features: string[];
+  stack: string[]; 
+  color: string; 
+  liveUrl?: string; 
+  backendUrl?: string;
+  githubUrl?: string 
+}) {
+  return (
+    <div className="group flex flex-col border-[3px] border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all overflow-hidden">
+      {/* Visual Preview Area */}
+      <div className={`h-48 md:h-64 border-b-[3px] border-black ${color} flex items-center justify-center relative overflow-hidden`}>
+        <div className="absolute inset-0 dotted-grid opacity-20"></div>
+        <div className="z-10 text-3xl md:text-5xl font-heading text-black opacity-10 select-none tracking-tighter uppercase whitespace-nowrap">
+          {title} {title}
+        </div>
+        {/* Technical Wireframe Elements */}
+        <div className="absolute top-2 left-2 border border-black/20 p-1 text-[8px] font-mono text-black/50">0xCOGNITIVE_ENGINE_ACTIVE</div>
+        <div className="absolute bottom-2 right-2 border border-black/20 p-1 text-[8px] font-mono text-black/50">AGENTS: ACTIVE | SYSTEM: ONLINE</div>
+        
+        {/* Neural connection node graph style visual layout */}
+        <div className="w-4/5 h-3/4 flex items-center justify-center relative pointer-events-none">
+          <svg className="w-full h-full opacity-20 absolute inset-0 stroke-black stroke-[1.5]" viewBox="0 0 100 100">
+            <line x1="20" y1="50" x2="50" y2="20" />
+            <line x1="20" y1="50" x2="50" y2="50" />
+            <line x1="20" y1="50" x2="50" y2="80" />
+            <line x1="50" y1="20" x2="80" y2="50" />
+            <line x1="50" y1="50" x2="80" y2="50" />
+            <line x1="50" y1="80" x2="80" y2="50" />
+            <circle cx="20" cy="50" r="4" fill="black" />
+            <circle cx="50" cy="20" r="4" fill="black" />
+            <circle cx="50" cy="50" r="4" fill="black" />
+            <circle cx="50" cy="80" r="4" fill="black" />
+            <circle cx="80" cy="50" r="4" fill="black" />
+          </svg>
+          <div className="font-mono text-[10px] bg-black text-white px-3 py-1.5 border-2 border-black tracking-widest uppercase font-bold z-10 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            AGENT_NODE
+          </div>
+        </div>
+      </div>
+
+      {/* Content Area */}
+      <div className="p-6 md:p-8 flex-grow flex flex-col">
+        <div className="flex items-start justify-between gap-4 mb-3">
+          <h3 className="text-2xl md:text-3xl font-heading uppercase tracking-tight leading-none text-black">
+            {title}
+          </h3>
+          <span className="bg-black text-white text-[9px] font-mono font-bold px-2 py-0.5 tracking-tighter border border-black uppercase whitespace-nowrap">
+            AGENTIC_AI
+          </span>
+        </div>
+        <p className="font-mono text-sm md:text-base font-medium mb-6 leading-relaxed opacity-70">
+          {description}
+        </p>
+
+        {/* Features Bullet List */}
+        <div className="border-t-2 border-black/10 pt-4 mb-6">
+          <span className="font-mono text-[10px] font-bold text-black/40 uppercase tracking-wider block mb-2">// CAPABILITIES_REPORT:</span>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            {features.map((feature, index) => (
+              <li key={index} className="font-mono text-xs font-bold flex items-start gap-1.5 text-black/80">
+                <span className="text-accent-pink">▶</span>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        {/* Tech Stack */}
+        <div className="flex flex-wrap gap-2 mb-8">
+          {stack.map((item, index) => (
+            <span key={index} className="bg-black text-white text-[10px] md:text-xs font-bold px-2 py-0.5 tracking-tighter border border-black">
+              {item}
+            </span>
+          ))}
+        </div>
+
+        {/* Action Buttons */}
+        <div className="mt-auto grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link 
+            href={liveUrl || "#"} 
+            target={liveUrl ? "_blank" : undefined}
+            className="bg-accent border-[2px] border-black py-3 font-heading text-base hover:bg-black hover:text-white transition-colors uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 flex justify-center items-center gap-1.5"
+          >
+            <span>FRONTEND</span>
+            <span className="text-xs font-sans">↗</span>
+          </Link>
+          {backendUrl ? (
+            <Link 
+              href={backendUrl} 
+              target="_blank"
+              className="bg-accent-blue text-white border-[2px] border-black py-3 font-heading text-base hover:bg-black hover:text-white transition-colors uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 flex justify-center items-center gap-1.5"
+            >
+              <span>BACKEND_API</span>
+              <span className="text-xs font-sans">↗</span>
+            </Link>
+          ) : (
+            <div className="border-[2px] border-dashed border-black/30 py-3 font-heading text-base text-black/30 flex justify-center items-center">
+              NO_BACKEND
+            </div>
+          )}
+          <Link 
+            href={githubUrl || "#"} 
+            target={githubUrl ? "_blank" : undefined}
+            className="bg-white border-[2px] border-black py-3 font-heading text-base hover:bg-black hover:text-white transition-colors uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 flex justify-center items-center gap-1.5"
+          >
+            <span>SOURCE</span>
+            <span className="text-xs font-sans">↗</span>
           </Link>
         </div>
       </div>

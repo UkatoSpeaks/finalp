@@ -36,7 +36,7 @@ export default function Home() {
             I build digital products that refuse to be boring.
           </p>
           <div className="flex flex-wrap justify-center gap-3 text-xs md:text-sm font-mono font-bold text-black/70">
-            <span>React</span> • <span>Node</span> • <span>AI</span> • <span>TypeScript</span>
+            <span>LangChain</span> • <span>LangGraph</span> • <span>FastAPI</span> • <span>Docker</span> • <span>Next.js</span> • <span>Python</span>
           </div>
         </div>
 
@@ -111,18 +111,18 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <SkillModule 
-            title="FRONTEND" 
-            skills={["React / Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js"]} 
-            color="bg-white"
-          />
-          <SkillModule 
-            title="BACKEND" 
-            skills={["Node.js / Express", "Python / FastAPI", "PostgreSQL / MongoDB", "Redis", "Docker"]} 
+            title="AI_&_AGENTS" 
+            skills={["LangChain", "LangGraph", "Agentic AI / LLMs", "RAG Pipelines", "OpenAI / Groq SDKs"]} 
             color="bg-accent"
           />
           <SkillModule 
-            title="AI_GEN_AI" 
-            skills={["LLM Applications", "Prompt Engineering", "OpenAI / Anthropic SDKs", "Pinecone / Vector DBs", "RAG Pipelines"]} 
+            title="BACKEND" 
+            skills={["FastAPI", "Docker", "Python", "Node.js / Express", "PostgreSQL / MongoDB"]} 
+            color="bg-white"
+          />
+          <SkillModule 
+            title="FRONTEND" 
+            skills={["React / Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js"]} 
             color="bg-white"
           />
           <SkillModule 
@@ -189,38 +189,60 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="flex flex-col gap-10">
+          {/* Flagship Agentic AI Project: ApplyAI */}
           <AgentProjectCard 
-            title="CUSTOMER SUPPORT RAG AGENT" 
-            description="Built an intelligent customer support assistant that answers user queries using Retrieval-Augmented Generation (RAG). The system indexes a company FAQ PDF into a Chroma vector database using Mistral embeddings and retrieves relevant context before generating responses with an LLM. It also maintains conversational memory to provide context-aware answers across multiple interactions."
+            title="APPLY AI — JOB APPLICATION AI AGENT" 
+            description="Built an agentic AI job application workflow assistant that automates repetitive application tasks while keeping human decision-making and control at the center. ApplyAI breaks down the application process into autonomous reasoning stages: analyzing job postings, evaluating skill-requirement alignment, tailoring resumes, generating custom cover letters, drafting response answers, and managing application tracking."
             features={[
-              "PDF-based knowledge base indexing",
-              "Semantic search via Mistral embeddings",
-              "Conversational memory persistence",
-              "Source-grounded AI response generation"
+              "Job description & requirement parsing",
+              "Skill match matrix & requirement gap analysis",
+              "Tailored resume & cover letter drafting",
+              "Human-in-the-loop workflow approval control",
+              "Multi-step agentic cognitive pipeline",
+              "Application status tracking & management"
             ]}
-            stack={["Python", "FastAPI", "Streamlit", "LangChain", "ChromaDB", "Mistral", "Groq"]}
+            workflow={["JOB POSTING", "JOB ANALYZER", "SKILL MATCH", "APP PREP", "RESUME & COVER LETTER", "USER REVIEW"]}
+            badge="HUMAN_IN_THE_LOOP"
+            stack={["Next.js", "TypeScript", "React", "Tailwind CSS", "Agentic AI", "LLM Workflows", "Vercel"]}
             color="bg-accent"
-            liveUrl="https://customer-rag-agent.streamlit.app"
-            backendUrl="https://customer-rag-agent.onrender.com"
-            githubUrl="https://github.com/UkatoSpeaks/Customer-Rag-.git"
+            liveUrl="https://job-application-ai-agent-1bxya6fcv.vercel.app/"
+            githubUrl="https://github.com/UkatoSpeaks/job-application-ai-agent"
           />
-          <AgentProjectCard 
-            title="MULTI-AGENT SCHEDULING ASSISTANT" 
-            description="Developed a production-style multi-agent scheduling assistant using LangGraph. The application routes user requests through specialized agents that understand booking intent, validate available time slots, maintain conversation state, and simulate appointment scheduling. The workflow demonstrates stateful agent orchestration with conditional routing and persistent memory."
-            features={[
-              "Multi-agent LangGraph orchestration",
-              "Intelligent routing & conditional edges",
-              "Booking workflow state machine",
-              "SQLite persistent checkpointer memory",
-              "Date normalization & slot validation"
-            ]}
-            stack={["Python", "FastAPI", "LangGraph", "LangChain", "SQLite", "Pydantic", "Streamlit"]}
-            color="bg-accent-pink"
-            liveUrl="https://multi-agent-scheduler.streamlit.app"
-            backendUrl="https://multi-agent-scheduler.onrender.com"
-            githubUrl="https://github.com/UkatoSpeaks/multi-agent-scheduler"
-          />
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <AgentProjectCard 
+              title="CUSTOMER SUPPORT RAG AGENT" 
+              description="Built an intelligent customer support assistant that answers user queries using Retrieval-Augmented Generation (RAG). The system indexes a company FAQ PDF into a Chroma vector database using Mistral embeddings and retrieves relevant context before generating responses with an LLM. It also maintains conversational memory to provide context-aware answers across multiple interactions."
+              features={[
+                "PDF-based knowledge base indexing",
+                "Semantic search via Mistral embeddings",
+                "Conversational memory persistence",
+                "Source-grounded AI response generation"
+              ]}
+              stack={["Python", "FastAPI", "Streamlit", "LangChain", "ChromaDB", "Mistral", "Groq"]}
+              color="bg-white"
+              liveUrl="https://customer-rag-agent.streamlit.app"
+              backendUrl="https://customer-rag-agent.onrender.com"
+              githubUrl="https://github.com/UkatoSpeaks/Customer-Rag-.git"
+            />
+            <AgentProjectCard 
+              title="MULTI-AGENT SCHEDULING ASSISTANT" 
+              description="Developed a production-style multi-agent scheduling assistant using LangGraph. The application routes user requests through specialized agents that understand booking intent, validate available time slots, maintain conversation state, and simulate appointment scheduling. The workflow demonstrates stateful agent orchestration with conditional routing and persistent memory."
+              features={[
+                "Multi-agent LangGraph orchestration",
+                "Intelligent routing & conditional edges",
+                "Booking workflow state machine",
+                "SQLite persistent checkpointer memory",
+                "Date normalization & slot validation"
+              ]}
+              stack={["Python", "FastAPI", "LangGraph", "LangChain", "SQLite", "Pydantic", "Streamlit"]}
+              color="bg-accent-pink"
+              liveUrl="https://multi-agent-scheduler.streamlit.app"
+              backendUrl="https://multi-agent-scheduler.onrender.com"
+              githubUrl="https://github.com/UkatoSpeaks/multi-agent-scheduler"
+            />
+          </div>
         </div>
 
         <div className="mt-16 flex justify-center">
@@ -429,7 +451,7 @@ export default function Home() {
                 Proven track record in building end-to-end applications from scratch to deployment."
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
-                {['DOCKER', 'AWS', 'CI/CD', 'TESTING'].map(tag => (
+                {['LANGCHAIN', 'LANGGRAPH', 'FASTAPI', 'DOCKER', 'NEXT.JS', 'PYTHON'].map(tag => (
                   <span key={tag} className="border-2 border-black px-3 py-1 text-[10px] font-bold font-mono">
                     [{tag}]
                   </span>
@@ -655,6 +677,8 @@ function AgentProjectCard({
   title, 
   description, 
   features,
+  workflow,
+  badge = "AGENTIC_AI",
   stack, 
   color, 
   liveUrl, 
@@ -664,6 +688,8 @@ function AgentProjectCard({
   title: string; 
   description: string; 
   features: string[];
+  workflow?: string[];
+  badge?: string;
   stack: string[]; 
   color: string; 
   liveUrl?: string; 
@@ -679,12 +705,12 @@ function AgentProjectCard({
           {title} {title}
         </div>
         {/* Technical Wireframe Elements */}
-        <div className="absolute top-2 left-2 border border-black/20 p-1 text-[8px] font-mono text-black/50">0xCOGNITIVE_ENGINE_ACTIVE</div>
-        <div className="absolute bottom-2 right-2 border border-black/20 p-1 text-[8px] font-mono text-black/50">AGENTS: ACTIVE | SYSTEM: ONLINE</div>
+        <div className="absolute top-2 left-2 border border-black/20 p-1 text-[8px] font-mono text-black/60 font-bold">0xCOGNITIVE_ENGINE_ACTIVE</div>
+        <div className="absolute bottom-2 right-2 border border-black/20 p-1 text-[8px] font-mono text-black/60 font-bold">AGENTS: ACTIVE | SYSTEM: ONLINE</div>
         
         {/* Neural connection node graph style visual layout */}
         <div className="w-4/5 h-3/4 flex items-center justify-center relative pointer-events-none">
-          <svg className="w-full h-full opacity-20 absolute inset-0 stroke-black stroke-[1.5]" viewBox="0 0 100 100">
+          <svg className="w-full h-full opacity-25 absolute inset-0 stroke-black stroke-[1.5]" viewBox="0 0 100 100">
             <line x1="20" y1="50" x2="50" y2="20" />
             <line x1="20" y1="50" x2="50" y2="50" />
             <line x1="20" y1="50" x2="50" y2="80" />
@@ -698,24 +724,43 @@ function AgentProjectCard({
             <circle cx="80" cy="50" r="4" fill="black" />
           </svg>
           <div className="font-mono text-[10px] bg-black text-white px-3 py-1.5 border-2 border-black tracking-widest uppercase font-bold z-10 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            AGENT_NODE
+            AGENT_PIPELINE
           </div>
         </div>
       </div>
 
       {/* Content Area */}
       <div className="p-6 md:p-8 flex-grow flex flex-col">
-        <div className="flex items-start justify-between gap-4 mb-3">
+        <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
           <h3 className="text-2xl md:text-3xl font-heading uppercase tracking-tight leading-none text-black">
             {title}
           </h3>
-          <span className="bg-black text-white text-[9px] font-mono font-bold px-2 py-0.5 tracking-tighter border border-black uppercase whitespace-nowrap">
-            AGENTIC_AI
+          <span className="bg-black text-white text-[9px] font-mono font-bold px-2.5 py-1 tracking-tighter border border-black uppercase whitespace-nowrap shadow-[2px_2px_0px_0px_rgba(0,0,0,0.3)]">
+            [{badge}]
           </span>
         </div>
-        <p className="font-mono text-sm md:text-base font-medium mb-6 leading-relaxed opacity-70">
+        <p className="font-mono text-sm md:text-base font-medium mb-6 leading-relaxed opacity-75">
           {description}
         </p>
+
+        {/* Workflow Pipeline Diagram if present */}
+        {workflow && workflow.length > 0 && (
+          <div className="border-t-2 border-black/10 pt-4 mb-6">
+            <span className="font-mono text-[10px] font-bold text-black/40 uppercase tracking-wider block mb-2">// AGENTIC_WORKFLOW_PIPELINE:</span>
+            <div className="flex flex-wrap items-center gap-2 font-mono text-[11px] font-bold">
+              {workflow.map((step, idx) => (
+                <div key={idx} className="flex items-center gap-1.5">
+                  <span className="bg-accent/40 border-2 border-black px-2 py-0.5 text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    {step}
+                  </span>
+                  {idx < workflow.length - 1 && (
+                    <span className="text-accent-pink font-bold">➔</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Features Bullet List */}
         <div className="border-t-2 border-black/10 pt-4 mb-6">
@@ -740,16 +785,16 @@ function AgentProjectCard({
         </div>
 
         {/* Action Buttons */}
-        <div className="mt-auto grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className={`mt-auto grid grid-cols-1 ${backendUrl ? 'sm:grid-cols-3' : 'sm:grid-cols-2'} gap-3`}>
           <Link 
             href={liveUrl || "#"} 
             target={liveUrl ? "_blank" : undefined}
-            className="bg-accent border-[2px] border-black py-3 font-heading text-base hover:bg-black hover:text-white transition-colors uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 flex justify-center items-center gap-1.5"
+            className="bg-accent text-black border-[2px] border-black py-3 font-heading text-base hover:bg-black hover:text-white transition-colors uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 flex justify-center items-center gap-1.5"
           >
-            <span>FRONTEND</span>
+            <span>{backendUrl ? "FRONTEND" : "LIVE_APP"}</span>
             <span className="text-xs font-sans">↗</span>
           </Link>
-          {backendUrl ? (
+          {backendUrl && (
             <Link 
               href={backendUrl} 
               target="_blank"
@@ -758,15 +803,11 @@ function AgentProjectCard({
               <span>BACKEND_API</span>
               <span className="text-xs font-sans">↗</span>
             </Link>
-          ) : (
-            <div className="border-[2px] border-dashed border-black/30 py-3 font-heading text-base text-black/30 flex justify-center items-center">
-              NO_BACKEND
-            </div>
           )}
           <Link 
             href={githubUrl || "#"} 
             target={githubUrl ? "_blank" : undefined}
-            className="bg-white border-[2px] border-black py-3 font-heading text-base hover:bg-black hover:text-white transition-colors uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 flex justify-center items-center gap-1.5"
+            className="bg-white text-black border-[2px] border-black py-3 font-heading text-base hover:bg-black hover:text-white transition-colors uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 flex justify-center items-center gap-1.5"
           >
             <span>SOURCE</span>
             <span className="text-xs font-sans">↗</span>

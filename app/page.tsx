@@ -49,11 +49,16 @@ export default function Home() {
             VIEW_PROJECTS
             <span className="group-hover:translate-x-2 transition-transform">→</span>
           </Link>
-          <button 
-            className="bg-white text-black px-8 md:px-12 py-4 md:py-6 border-[3px] border-black hover:bg-accent-pink hover:text-white transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 font-heading text-xl md:text-2xl"
+          <a 
+            href="/Anurag_Chaudhary_CV.pdf"
+            download="Anurag_Chaudhary_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-white text-black px-8 md:px-12 py-4 md:py-6 border-[3px] border-black hover:bg-accent-pink hover:text-white transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 flex items-center gap-3 font-heading text-xl md:text-2xl"
           >
             DOWNLOAD_CV
-          </button>
+            <span className="group-hover:translate-y-1 transition-transform">↓</span>
+          </a>
         </div>
       </section>
 
@@ -506,7 +511,8 @@ export default function Home() {
             <ContactLink 
               label="GET_RESUME" 
               value="RESUME.PDF" 
-              href="/resume.pdf" 
+              href="/Anurag_Chaudhary_CV.pdf" 
+              download="Anurag_Chaudhary_CV.pdf"
               color="bg-accent-pink text-white"
             />
           </div>
@@ -854,10 +860,13 @@ function VerificationModule({ label, value, color = "bg-white" }: { label: strin
   );
 }
 
-function ContactLink({ label, value, href, color }: { label: string; value: string; href: string; color: string }) {
+function ContactLink({ label, value, href, color, download }: { label: string; value: string; href: string; color: string; download?: string }) {
   return (
-    <Link 
+    <a 
       href={href}
+      download={download}
+      target={download || href.startsWith('http') || href.endsWith('.pdf') ? "_blank" : undefined}
+      rel="noopener noreferrer"
       className={`group border-[3px] border-black p-5 ${color} shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all flex flex-col items-start`}
     >
       <span className="text-[10px] font-mono font-bold tracking-widest opacity-50 uppercase mb-3">
@@ -869,6 +878,6 @@ function ContactLink({ label, value, href, color }: { label: string; value: stri
       <span className="mt-4 text-xs font-mono font-bold group-hover:translate-x-1 transition-transform">
         UPLINK_&gt;
       </span>
-    </Link>
+    </a>
   );
 }

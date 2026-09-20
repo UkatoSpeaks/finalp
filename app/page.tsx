@@ -267,8 +267,10 @@ export default function Home() {
         </div>
 
         <div className="mt-16 flex justify-center">
-          <Link 
-            href="/archive" 
+          <Link
+            href="https://github.com/UkatoSpeaks?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group border-[3px] border-black px-12 py-5 bg-white font-heading text-xl md:text-2xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all flex items-center gap-3 uppercase"
           >
             REST_OF_THE_ARCHIVE

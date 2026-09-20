@@ -25,6 +25,18 @@
   h1, h2, h3 {
     @apply font-heading uppercase tracking-tighter;
   }
+
+  /* Offsets anchor-link targets so the fixed navbar doesn't cover the
+     section heading when jumping in via #nav links. */
+  section[id] {
+    scroll-margin-top: 150px;
+  }
+
+  @media (min-width: 768px) {
+    section[id] {
+      scroll-margin-top: 110px;
+    }
+  }
 }
 
 @layer utilities {

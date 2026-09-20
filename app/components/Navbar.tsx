@@ -38,6 +38,7 @@ export default function Navbar() {
           <NavLink href="#skills">/SKILLS</NavLink>
           <NavLink href="#projects">/PROJECTS</NavLink>
           <NavLink href="#logs">/LOGS</NavLink>
+          <NavLink href="#experience">/EXPERIENCE</NavLink>
           <NavLink href="#contact">/CONTACT</NavLink>
           
           <Link 

@@ -23,7 +23,7 @@ export default function Home() {
         {/* Main Heading: Visual Anchor */}
         <div className="flex flex-col items-center mb-10">
           <h1 className="text-6xl md:text-[10rem] font-heading leading-[0.85] tracking-tighter uppercase select-none">
-            FULL STACK
+            AGENTIC AI
           </h1>
           <h1 className="text-6xl md:text-[10rem] font-heading text-outline leading-[0.85] tracking-tighter uppercase select-none">
             DEVELOPER
@@ -246,6 +246,22 @@ export default function Home() {
               liveUrl="https://multi-agent-scheduler.streamlit.app"
               backendUrl="https://multi-agent-scheduler.onrender.com"
               githubUrl="https://github.com/UkatoSpeaks/multi-agent-scheduler"
+            />
+            <AgentProjectCard
+              title="FOOTBALL SCOUTING & PLAYER SIMILARITY SYSTEM"
+              description="A data-driven football scouting platform that analyzes player statistics to identify players with similar playing styles and performance profiles. The project is designed to help scouts and analysts quickly discover potential alternatives or recruitment targets based on statistical similarity, moving beyond single stats to compare players across multiple performance attributes at once."
+              features={[
+                "Search & analyze a player's performance profile",
+                "Compare goals, assists, passing, shots & dribbles",
+                "K-Means clustering of similar playing styles",
+                "Identifies statistically similar player matches",
+                "Interactive Streamlit exploration dashboard",
+                "Visualizes player profiles & comparisons"
+              ]}
+              stack={["Python", "Pandas", "Scikit-learn", "Matplotlib", "Streamlit"]}
+              color="bg-accent-blue"
+              liveUrl="https://nhbrznl2muyprplejvgrly.streamlit.app/"
+              githubUrl="https://github.com/UkatoSpeaks/Football-Scouting-Agent.git"
             />
           </div>
         </div>
